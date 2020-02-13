@@ -10,7 +10,7 @@ source:
   sha256: ca811cb85b582136e8a7cf39ff1e6e45faf8025442b2da7d36de17dd56f50fda
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   noarch: python
 
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.*
     - beautifulsoup4 >=4.6.0
-    - matplotlib >=1.1
+    - matplotlib-base >=1.1
     - numpy >=0.7.0
     - pandas-datareader >=0.5.0
     - pandas >=0.20.1
