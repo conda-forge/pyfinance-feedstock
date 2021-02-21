@@ -5,9 +5,13 @@ Home: https://github.com/bsolomon1124/pyfinance
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyfinance-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python package designed for security returns analysis.
+
+Development: https://github.com/bsolomon1124/pyfinance
+
+Documentation: https://github.com/bsolomon1124/pyfinance
 
 pyfinance is a Python package built for investment management and analysis of security returns.
 It is meant to be a complement to existing packages geared towards quantitative finance,
