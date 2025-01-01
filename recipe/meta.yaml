@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 799ccdfcbd693515ab6e53c5dd3998afa1b7d31686e5e50e3109154912d12fed
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.*
+    - python {{ python_min }}
     - pip
     - setuptools
     - pytest-runner
   run:
-    - python >=3.*
+    - python >={{ python_min }}
     - beautifulsoup4 >=4.6.0
     - matplotlib-base >=1.1
     - numpy >=0.7.0
@@ -36,6 +36,8 @@ requirements:
     - xmltodict >=0.10.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyfinance
 
