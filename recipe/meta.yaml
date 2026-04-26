@@ -10,18 +10,18 @@ source:
   sha256: 9406bd910e938058d3f3345e386fa0accdfcd93b7ac093b2f2178ff7daaa4995
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.*
+    - python {{ python_min }}
     - pip
     - setuptools
     - pytest-runner
   run:
-    - python >=3.*
+    - python >={{ python_min }}
     - beautifulsoup4 >=4.6.0
     - matplotlib-base >=1.1
     - numpy >=0.7.0
@@ -36,6 +36,8 @@ requirements:
     - xmltodict >=0.10.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pyfinance
 
